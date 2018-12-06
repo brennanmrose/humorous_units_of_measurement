@@ -1,0 +1,3 @@
+class HumorousUnitsOfMeasurement::Terms
+
+end 
