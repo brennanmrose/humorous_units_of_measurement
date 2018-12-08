@@ -3,9 +3,10 @@ class HumorousUnitsOfMeasurement::CLI
 	def start 
 		puts "Welcome to the Humorous Units of Measurment App"
 		puts "Here are the types of measurments you can select from:"
-		# HumorousUnitsOfMeasurement::Scraper.scrape_units_of_measurement  << do i want to call my scraper in measurements? 
-		list_units
-		menu
+		HumorousUnitsOfMeasurement::Scraper.scrape_units_of_measurement  #<< do i want to call my scraper in measurements? 
+		
+		# list_measurements
+		# menu
 
 
 	end 
@@ -15,9 +16,9 @@ class HumorousUnitsOfMeasurement::CLI
 	# ask for input
 	# list_terms and call another method
 
-	def list_units
-		HumorousUnitsOfMeasurement::Measurements.all.each.with_index(1) do |unit, index|
-			puts '#{index}. #{unit.name}'
+	def list_measurements
+		HumorousUnitsOfMeasurement::Measurements.all.each.with_index(1) do |measurement, index|
+			puts '#{index}. #{measurement.name}'
 		end
 	end
 

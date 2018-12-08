@@ -1,5 +1,5 @@
 class HumorousUnitsOfMeasurement::Measurements
-	attr_accessor :name, :terms, :definitions
+	attr_accessor :measurement, :term, :definition
 
 	@@all = []
 
