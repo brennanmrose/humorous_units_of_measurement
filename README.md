@@ -1,8 +1,6 @@
 # HumorousUnitsOfMeasurement
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/humorous_units_of_measurement`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Humorous Units of Measurement App. This vocabulary building app was designed so that you can expand your units of measurement lexicon to impress your friends and maybe get some laughs. You may be surprised to find that all of the terms found within this app can be located within the International System of Units, they are as legitimate as it comes! We hope you enjoy and share with your friends. Happy learning! 
 
 ## Installation
 
@@ -32,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<github username>/humorous_units_of_measurement. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/brennanmrose/humorous_units_of_measurement. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +38,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the HumorousUnitsOfMeasurement project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/<github username>/humorous_units_of_measurement/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the HumorousUnitsOfMeasurement project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/brennanmrose/humorous_units_of_measurement/blob/master/CODE_OF_CONDUCT.md).
