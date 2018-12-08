@@ -22,7 +22,7 @@ class HumorousUnitsOfMeasurement::CLI
 	end
 
 	def menu 
-		puts "Enter the number of the unit you would like to learn about"
+		puts "Enter the number of the measurement you would like to learn more about"
 		input = nil #temporary
 		while input != "exit"
 			input = gets.strip.downcase
