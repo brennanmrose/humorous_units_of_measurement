@@ -12,7 +12,6 @@ class HumorousUnitsOfMeasurement::Measurements
 
     def save 
     	@@all << self
-        binding.pry
         self
     end 
 
