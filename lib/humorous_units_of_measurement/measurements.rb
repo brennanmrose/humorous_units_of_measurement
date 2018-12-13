@@ -1,10 +1,10 @@
 class HumorousUnitsOfMeasurement::Measurements
-	attr_accessor :measurement, :term, :definition
+	attr_accessor :name, :term, :definition
 
 	@@all = []
 
-	def initialize(attrributes)
-		attributes.each do |key, value|
+	def initialize(attributes_hash)
+		attributes_hash.each do |key, value|
       		self.send("#{key}=", value)
       	end
     	self.save 
@@ -12,9 +12,12 @@ class HumorousUnitsOfMeasurement::Measurements
 
     def save 
     	@@all << self
+        binding.pry
+        self
     end 
 
-    def self.all 
+    def self.all
+    binding.pry 
     	@@all 
     end 
 
