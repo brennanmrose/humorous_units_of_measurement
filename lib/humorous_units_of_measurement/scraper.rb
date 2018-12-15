@@ -15,7 +15,11 @@ class HumorousUnitsOfMeasurement::Scraper
 			term = b.text
 			terms_hash ={:term => term}
 			terms_array << terms_hash
+			binding.pry
 		end
+		definitions_array = Array.new
+
+		definitions = 
 		measurement_zero = HumorousUnitsOfMeasurement::Measurements.new(categories_array[0])
 			measurement_zero.term = terms_array[0], terms_array[1], terms_array[2]
 		measurement_one =  HumorousUnitsOfMeasurement::Measurements.new(categories_array[1])
