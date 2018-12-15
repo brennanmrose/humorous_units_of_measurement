@@ -1,5 +1,5 @@
 class HumorousUnitsOfMeasurement::Measurements
-	attr_accessor :name, :term, :definition
+	attr_accessor :category, :term, :definition
 
 	@@all = []
 
@@ -16,7 +16,6 @@ class HumorousUnitsOfMeasurement::Measurements
     end 
 
     def self.all
-    binding.pry 
     	@@all 
     end 
 

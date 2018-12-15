@@ -27,6 +27,7 @@ class HumorousUnitsOfMeasurement::CLI
 		else 
 			puts "Sorry, that input cannot be found"
 			select_measurement
+		end
 	end 
 
 	def list_terms
