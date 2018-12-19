@@ -1,6 +1,6 @@
 # HumorousUnitsOfMeasurement
 
-Welcome to the Humorous Units of Measurement App. This vocabulary building app was designed so that you can expand your units of measurement lexicon to impress your friends and maybe get some laughs. You may be surprised to find that all of the terms found within this app can be located within the International System of Units, they are as legitimate as it comes! We hope you enjoy and share with your friends. Happy learning! 
+Welcome to the Humorous Units of Measurement CLI. This vocabulary building app was designed so that you can expand your units of measurement lexicon to impress your friends and maybe get some laughs. You may be surprised to find that all of the terms found within this app can be located within the International System of Units, they are as legitimate as it comes! We hope you enjoy and share with your friends. Happy learning! 
 
 ## Installation
 
@@ -20,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once installed simply run
+```
+    $ ruby bin/humorous_units_of_measurement
+ ```
 
 ## Development
 

@@ -27,26 +27,18 @@ class HumorousUnitsOfMeasurement::CLI
 			measurement = @sorted_measurements[index]
 			puts "You have selected #{measurement.category}"
 			puts "Here is a list of humorous terms found under #{measurement.category}:"
-			binding.pry
-			# terms = @sorted_measurements[index].term.each.with_index(1) do |term, index|
-			# 	terms.delete_if{|key, value| key == "definition" }
-			# 		puts "#{index}. #{term}"
-			# 	end
-			# end
-			# list_terms
+			terms = @sorted_measurements[index].term.each.with_index(1) do |term, index|
+				puts
+				puts "#{index}. #{term}"
+				puts
+			end
 		elsif input == "exit"
 		else 
 			puts "Sorry, that input cannot be found"
-			# select_measurement
 		end
 	end 
 
 	# def list_terms
-	# 	binding.pry
-	# 	@sorted_measurements[index]each.with_index(1) do |term, index|
-	# 		puts "#{index}. #{term}"
-	# 	end
-	# 	# select_term
 	# end
 
 	def select_term

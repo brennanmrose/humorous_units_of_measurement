@@ -1,30 +1,28 @@
 class HumorousUnitsOfMeasurement::Scraper 
 
 	def self.scrape_units_of_measurement
-		get_page = Nokogiri::HTML(open('https://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement')) 
-		categories_array = Array.new
-		categories = get_page.css("div.mw-parser-output h2").css("span.mw-headline").children
-		categories[0..7].each do |a|
-			category = a.text 
-			categories_hash ={:category => category}
-			categories_array << categories_hash
-		end
-		terms_array = Array.new 
-		terms = get_page.css("div.mw-parser-output h3").css("span.mw-headline").children 
-		terms[0..38].each do |b|  
-			term = b.text
-			terms_hash ={:term => term}
-			terms_array << terms_hash
-		end
-		definitions_array = Array.new
-		definitions = get_page.css("div.mw-parser-output h3 + p")
-		definitions_hash ={:definition => []}
-		definitions.each do |c|
-			definition = c.text
-			# definitions_hash ={:definition => definition}
-			definitions_array << definition
-		end
-		measurement_one = HumorousUnitsOfMeasurement::Measurements.new(categories_array[0])
+			get_page = Nokogiri::HTML(open('https://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement')) 
+			categories_array = Array.new
+			categories = get_page.css("div.mw-parser-output h2").css("span.mw-headline").children
+			categories[0..7].each do |category|
+				categories_hash ={:category => category.text}
+				categories_array << categories_hash
+			end
+			terms_array = Array.new 
+			terms = get_page.css("div.mw-parser-output h3").css("span.mw-headline").children 
+			terms[0..38].each do |term|  
+				terms_hash ={:term => term.text}
+				terms_array << terms_hash
+			end
+			definitions_array = Array.new
+			definitions = get_page.css("div.mw-parser-output h3 + p")
+			definitions_hash ={:definition => []}
+			definitions.each do |definition|
+				definitions_hash ={:definition => definition.text}
+				definitions_array << definitions_hash
+			end
+binding.pry
+ 		measurement_one =  HumorousUnitsOfMeasurement::Measurements.new(categories_array[0])
 			measurement_one.term = terms_array[0], terms_array[1], terms_array[2]
 				measurement_one.term[0][:definition]  
 				measurement_one.term[1][:definition] = definitions_array[0]
@@ -79,9 +77,43 @@ class HumorousUnitsOfMeasurement::Scraper
 				measurement_eight.term[9][:definition] = definitions_array[31]
 				measurement_eight.term[10][:definition] = definitions_array[32]
 				measurement_eight.term[11][:definition] = definitions_array[33]
+		
 	end
 end
 
-			# definition = c.text
-			# definitions_hash[:definition] << definition
-			# definitions_array << definitions_hash
+# class HumorousUnitsOfMeasurement::Scraper 
+
+
+		# 	def self.scrape_units_of_measurement
+		# attributes_array = Array.new
+		# get_page = Nokogiri::HTML(open('https://en.wikipedia.org/wiki/List_of_humorous_units_of_measurement')) 
+		# categories_array = get_page.css("div.mw-parser-output h2").css("span.mw-headline").children
+		# categories_array[0..7].each do |category|
+		# 	attributes ={
+		# 		:category => category.text
+		# 	}
+		# 	attributes_array << attributes
+		# 		terms_array = get_page.css("div.mw-parser-output h3").css("span.mw-headline").children 
+		# 		terms_array[0..38].each do |term|
+		# 			attributes ={
+		# 			:term => term.text
+		# 		}
+		# 		attributes_array << attributes 
+		# 			definitions_array = get_page.css("div.mw-parser-output h3 + p")
+		# 			definitions_array.each do |definition|
+		# 				attributes ={ 
+		# 					:definition => definition.text
+		# 				}
+		# 				attributes_array << attributes
+		# 			measurement = HumorousUnitsOfMeasurement::Measurements.new(attributes_array)
+		# 		end
+
+# 	end
+# end
+
+	
+	# 	measurement_one = HumorousUnitsOfMeasurement::Measurements.new(attributes)
+	# 		attributes = 
+	# 		measurement_one.category = categories_array[0]
+	# 		measurement_one.term = terms_array[0], terms_array[1], terms_array[2]
+	# 		measurement_one.definition = definitions_array[0], definitions_array[1]
